@@ -30,6 +30,7 @@ function App() {
       </section>
 
       <div className={styles.mainBox}>
+
         <div className={styles.heading}>
           <img src="#" />
           <div className={styles.headingWrapper}>
@@ -42,42 +43,54 @@ function App() {
         </div>
 
         <div className={styles.contentInfo}>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptate
-            soluta quibusdam molestiae quisquam sapiente voluptatibus incidunt
-            ullam suscipit eveniet!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure quam eius soluta expedita accusantium.
           </p>
+
           <div className={styles.socialInfo}>
-            <div className={styles.repos}>
+
+            <div className={styles.socialWrap}>
               <span>Repos</span>
               <p>8</p>
             </div>
-            <div className={styles.followers}>
+
+            <div className={styles.socialWrap}>
               <span>Followers</span>
               <p>3938</p>
             </div>
-            <div className={styles.following}>
+
+            <div className={styles.socialWrap}>
               <span>Following</span>
               <p>9</p>
             </div>
+            
           </div>
+
           <div className={styles.generalInfo}>
-            <div className={styles.infoWrapp}>
+
+            <div
+            id={"location"}
+            className={styles.infoWrapp}>
               <img src={locationIcon} />
               <span>San Francisco</span>
             </div>
+
             <div className={styles.infoWrapp}>
               <img src={websiteIcon} />
               <span>website.website</span>
             </div>
+
             <div className={styles.infoWrapp}>
               <img src={twitterIcon} />
               <span>twitterUsername</span>
             </div>
+
             <div className={styles.infoWrapp}>
               <img src={companyIcon} />
               <span>company</span>
             </div>
+
           </div>
         </div>
       </div>
