@@ -49,12 +49,15 @@ body{
     .searchBar{
         display: flex;
         align-items: center;
-        justify-content: space-between;
         background-color: $light-body-background;
         box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
         border-radius: 15px;
-        padding: 6.5px 7px 7.5px 16px;
         margin-bottom: 16px;
+        width: 327px;
+        height: 60px;
+        justify-content: space-between;
+        padding-left: 16px;
+        padding-right: 7px ;
         img{
             width: 20px;
             height: 20px;
@@ -176,18 +179,41 @@ body{
             .generalInfo{
                 display: flex;
                 flex-direction: column;
-                #location{
-                    img{
-                        margin-right: 19.25px;
-                    }
-                }
+                gap: 16px ;
                 .infoWrapp{
                     display: flex;
-                    img{
-                        margin-right: 13px;
+                    gap: 13px;
+                    align-items: center;
+                    span{
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 19px;
+                        color: #4B6A9B;
                     }
+                    span:empty {
+                        color: #4B6A9B !important;
+                      }
+                      span:empty + svg path {
+                        fill: #4B6A9B !important;
+                      }
                 }
-                
+                .infoWrap{
+                    display: flex;
+                    gap: 17.5px;
+                    align-items: center;
+                    span{
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 19px;
+                        color: #4B6A9B;
+                    }
+                    span:empty {
+                        color: #4B6A9B !important;
+                      }
+                      span:empty + svg path {
+                        fill: #4B6A9B !important;
+                      }
+                }
             }
         }
     }
