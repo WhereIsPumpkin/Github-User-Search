@@ -26,6 +26,9 @@ body {
       padding: 31px 0px 0 0px;
       align-items: center;
       margin-bottom: 36px;
+      max-width: 572px;
+      margin-left: auto;
+      margin-right: auto;
       h1 {
         font-weight: 700;
         font-size: 26px;
@@ -60,6 +63,14 @@ body {
       justify-content: space-between;
       padding-left: 16px;
       padding-right: 7px;
+      max-width: 572px;
+      margin-left: auto;
+      margin-right: auto;
+      .WrapperSearchBar{
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
       img {
         width: 20px;
         height: 20px;
@@ -107,13 +118,15 @@ body {
       }
     }
     .mainBox {
+      margin-left: auto;
+      margin-right: auto;
       display: flex;
       flex-direction: column;
       box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
       border-radius: 15px;
       padding: 32px 24px 48px 24px;
       background-color: $light-body-background;
-      max-width: 730px;
+      max-width: 572px;
       .heading {
         display: flex;
         align-items: center;
@@ -279,6 +292,87 @@ body {
                 }
             }
         }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    main{
+      padding: 0px 98px;
+      header{
+        padding-top: 140px;
+      }
+      .searchBar{
+        height: 69px;
+        padding-left: 32px;
+        padding-right: 10px;
+        .WrapperSearchBar{
+          gap: 24px;
+        }
+        img{
+          width: 24px;
+          height: 24px;
+        }
+        input{
+          width: 275px;
+        }
+        input::placeholder{
+          font-size: 18px;
+        }
+      }
+      .mainBox{
+        padding: 40px;
+        .heading{
+          gap: 41px;
+          img{
+            width: 117px;
+            height: 117px;
+          }
+          .headingWrapper{
+            gap: 4px;
+            .nameWrapper{
+              gap: 2px;
+              h1{
+                font-size: 26px;
+              }
+              p{
+                font-size: 16px;
+              }
+            }
+            span{
+              font-size: 15px;
+            }
+          }
+        }
+        .contentInfo{
+          p{
+            font-size: 15px;
+          }
+          .socialInfo{
+            padding-left: 32px;
+            padding-right: 96px;
+            .socialWrap{
+              span{
+                font-size: 13px;
+              }
+              p{
+                font-size: 22px;
+              }
+            }
+          }
+          .generalInfo{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .infoWrap,
+            .infoWrapp{
+              span{
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

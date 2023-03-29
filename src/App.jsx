@@ -68,6 +68,7 @@ function App() {
       </header>
 
       <section className={`${styles.searchBar} ${dark ? styles.dark : null}`}>
+        <div className={styles.WrapperSearchBar}>
         <img src={searchIcon} alt="searchIcon" />
         <input
           value={value}
@@ -76,6 +77,7 @@ function App() {
           className={styles.userSearch}
           placeholder="Search GitHub username..."
         />
+        </div>
         <button className={styles.searchButton} onClick={dataRequest}>
           Search
         </button>
