@@ -25,12 +25,14 @@ function App() {
   const [twitter, setTwitter] = useState("");
   const [company, setCompany] = useState("@github");
 
-    console.log(name);
-
   const dataRequest = () => {
     fetch(`https://api.github.com/users/${value}`)
       .then((data) => data.json())
       .then((info) => {
+        console.log(info.message === "Not Found");
+        if(info.message === "Not Found"){
+
+        } else {
         setName(info.name);
         setUsername(`@${info.login}`);
         const date = new Date(info.created_at);
@@ -48,6 +50,7 @@ function App() {
         setTwitter(info.twitter_username);
         setCompany(info.company);
         setProf(info.avatar_url)
+      }
       });
   };
 
