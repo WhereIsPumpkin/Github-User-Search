@@ -24,6 +24,7 @@ function App() {
   const [website, setWebsite] = useState("https://github.blog");
   const [twitter, setTwitter] = useState("");
   const [company, setCompany] = useState("@github");
+  const [dark, setDark] = useState(false);
 
   const dataRequest = () => {
     fetch(`https://api.github.com/users/${value}`)
@@ -55,23 +56,25 @@ function App() {
   };
 
   return (
-    <>
+    <main className={dark ? styles.dark : null}>
       <header>
         <h1>devfinder</h1>
         <div className={styles.modeSwitch}>
-          <h2>DARK</h2>
-          <img src={moonIcon} alt="sunIcon" />
+          {dark ? <h2>LIGHT</h2>:<h2>DARK</h2>}
+          <img
+          onClick={() => setDark(!dark)}
+          src={dark ? sunIcon : moonIcon} alt="sunIcon" />
         </div>
       </header>
 
-      <section className={styles.searchBar}>
+      <section className={`${styles.searchBar} ${dark ? styles.dark : null}`}>
         <img src={searchIcon} alt="searchIcon" />
         <input
           value={value}
           onChange={(event) => setValue(event.target.value)}
           type="text"
           className={styles.userSearch}
-          placeholder="Search Github username..."
+          placeholder="Search GitHub username..."
         />
         <button className={styles.searchButton} onClick={dataRequest}>
           Search
@@ -153,7 +156,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </ main>
   );
 }
 
