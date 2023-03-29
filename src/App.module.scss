@@ -190,12 +190,6 @@ body{
                         line-height: 19px;
                         color: #4B6A9B;
                     }
-                    span:empty {
-                        color: #4B6A9B !important;
-                      }
-                      span:empty + svg path {
-                        fill: #4B6A9B !important;
-                      }
                 }
                 .infoWrap{
                     display: flex;
@@ -207,12 +201,6 @@ body{
                         line-height: 19px;
                         color: #4B6A9B;
                     }
-                    span:empty {
-                        color: #4B6A9B !important;
-                      }
-                      span:empty + svg path {
-                        fill: #4B6A9B !important;
-                      }
                 }
             }
         }
